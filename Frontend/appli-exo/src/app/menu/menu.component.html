@@ -1,0 +1,12 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul  class="nav navbar-nav">
+        <li *ngIf="!isAuth"  routerLinkActive="active"><a routerLink="/inscription">SignIn</a></li>
+        <li routerLinkActive="active"><a routerLink="/login">Login</a></li>
+        <li *ngIf="isAuth" routerLinkActive="active"><a routerLink="/edit">Edit</a></li>
+        <li *ngIf="isAuth" routerLinkActive="active"><a routerLink="/delete">Delete</a></li>
+        <li routerLinkActive="active"><a routerLink="/userlist">Users list</a></li>
+      </ul>
+    </div>
+  
+  </nav>

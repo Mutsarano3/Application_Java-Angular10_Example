@@ -1,0 +1,32 @@
+<app-menu></app-menu>
+<div class="col-sm-8 col-sm-offset-2">
+<form [formGroup]="editformGroup" (ngSubmit)="OnSubmitModify()">
+    <div class="form-group" >
+        <label for="firstname">
+            Prénom
+
+        </label>
+        <input type="text" [value]="user?.firstname" class="form-control" id="firstname" formControlName="firstname">
+
+    </div>
+    <div class="form-group">
+        <label for="name">
+            Nom
+
+        </label>
+        <input type="text" [value]="user?.name" class="form-control" id="name" formControlName="name">
+
+    </div>
+    <div class="form-group">
+        <label for="password">
+            Mot de passe
+
+        </label>
+        <input type="password" [value]="user?.password" class="form-control" id="password" formControlName="password">
+
+    </div>
+
+    <button [disabled]="editformGroup.invalid" type="submit" class="btn btn-primary">Modifier</button>
+   
+</form>
+</div>
